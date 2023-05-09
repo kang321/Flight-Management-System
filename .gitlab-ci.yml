@@ -1,0 +1,23 @@
+test selenium:
+  stage: test
+  services:
+    - selenium/standalone-firefox
+  image: python:3.9-slim
+  script:
+    - python3 -V
+    - python3 -m pip install pytest
+    - python3 -m pip install selenium
+    - python3 -m pip install webdriver_manager
+    - python3 -m pip install allure-pytest
+    - pip3 install -r requirements.txt
+    - pip3 install flask_cors
+    - pip3 install chromedriver_binary
+    - cd WebScrapping
+    - python3 web_scrapping.py &
+    - sleep 10
+    - export DISPLAY=:10
+    - python3 Test_AirCanada.py cicd
+
+
+
+

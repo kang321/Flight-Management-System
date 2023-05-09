@@ -1,0 +1,9 @@
+beautifulsoup4
+Flask
+nest_asyncio
+numpy
+pandas
+requests
+requests_html
+selenium
+webdriver_manager

@@ -1,0 +1,78 @@
+Serial number:
+Test case name:
+Test case input:
+test case description:
+expected outcomes:
+================================
+Serial number:1
+Test case name: Url validation	
+Test case input: source ,destination , date
+test case description: The test case forms an url from the input parameter for airline websites to webscrap/fetch the flight details. It checks for url's validity with session.get(url) method.
+expected outcomes: If the urls are valid it returns positive response else returns bad response.
+
+Serial number:2
+Test case name: date validation
+Test case input: date
+test case description: it takes the input data and check for date validation.As an example if the entered date is 30 Feb, then the test would raise an exception suggesting that the date is not valid.
+expected outcomes: If the date is valid it returns true and returns exception for invalid dates.
+
+Serial number: 3
+Test case name: back date validation
+Test case input: date
+test case description: the function checks date input and compare it with current date. It prevents the backdate serach which may lead to webscrapping failures by creating wrong url.
+expected outcomes: If the date is older than current date than it throws an error Else tests passes.
+
+Serial number: 4
+Test case name: test_response_type
+Test case input: source ,destination , date , number_of_persons
+test case description: we are sending a jason data to webscrapping function with valid entries to check if the api response properly.In this test we should receive non-empty output.
+expected outcomes: if the api works properly it should return the non-empty dataset.
+
+Serial number: 5
+Test case name: api failure response
+Test case input: source ,destination , date , number_of_persons
+test case description: We are passing incorrect values to webscraping function through api, and we are checking for the api response. It ideally should return a 500 response which we are comparing in the test function. If we receive 200 reponse then the test fails.
+expected outcomes:if the api works properly it should send 200 reponse which we are validing status-code with assetequals function.
+
+Serial number:6
+Test case name:sorce validation
+Test case input: source
+test case description: we are fetching the source airport checking it against the list of canadian and indian airports to figure out if the airport is valid.  
+expected outcomes: The test should generate a positive reponse for correct source airport.
+
+Serial number:7
+Test case name:destination validation
+Test case input: destination
+test case description: we are fetching the source airport checking it against the list of canadian and indian airports to figure out if the airport is valid.  
+expected outcomes: The test should generate a positive reponse for correct source airport.
+
+Serial number:8
+Test case name:departure time validation
+Test case input: dataframe
+test case description: the function checks for the time returned by webscrapping to see if all airlines returns time output in a predefined format of HHh MMm (hours and minutes). 
+expected outcomes: The function checks for the format before adding data into existing caching data for furture purposes.
+
+Serial number:9
+Test case name:arrival time validation
+Test case input: dataframe
+test case description: the function checks for the time returned by webscrapping to see if all airlines returns time output in a predefined format of HHh MMm (hours and minutes). 
+expected outcomes: The function checks for the format before adding data into existing caching data for furture purposes.
+
+Serial number:10
+Test case name: caching michanism check
+Test case input: caching dataframe
+test case description: we are validating the data which we have already searched for by checking the searched data under the caching dataframe.
+expected outcomes: the test returns positive reponse for the available caching data.
+
+Serial number:11
+Test case name: cost_format
+Test case input: source ,destination , date , number_of_persons
+test case description:we are checking if all currancy are listed in canadian dollar.
+expected outcomes: The dataframe should return all values in cadaian dollar else the function would generate an error.
+
+Serial number: 12
+Test case name: sorting
+Test case input: source ,destination , date , number_of_persons
+test case description: We are passing the details for webscrpping and getting a dataframe. After fetching the data we are sorting it on basis of price.(cheapest first). we are comparing the first and last values of the cost column to check the if the sorting validation works properly.
+expected outcomes: if the dataframe is returns sorted data then the outcome is positive else it would generate an error.
+

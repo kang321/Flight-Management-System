@@ -1,0 +1,71 @@
+.SearchForm {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    border: none;
+    padding: 10px;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background: linear-gradient(to bottom, #94c5f8 1%,#a6e6ff 70%,#b1b5ea 100%); 
+}
+
+.Button {
+    background-color: #0078d7;
+	border: none;
+    border-radius: 7px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+	padding: 7px 14px;
+	margin: 5px 10px 5px 10px;
+}
+
+.TealButton {
+    background-color: teal;
+	border: none;
+    border-radius: 7px;
+	color: white;
+	outline: none;
+	cursor: pointer;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+	padding: 7px 14px;
+	margin: 5px 10px 5px 10px;
+}
+
+.TealButton:hover {
+    background-color: transparent;
+    color: teal;
+    border: 2px solid teal;
+}
+
+.Button:hover {
+    background-color: transparent;
+    color: #0078d7;
+    border: 2px solid #0078d7;
+}
+
+.buttons {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .SearchForm {
+        width: 500px;
+    }
+}
